@@ -25,7 +25,7 @@ public class TestBase {
     public void setup(
             @Optional("chrome") String browser,
             @Optional("false") boolean isLambdaTest,
-            @Optional("true") boolean isHeadless, ITestResult result){
+            @Optional("false") boolean isHeadless, ITestResult result){
         WebDriver ltWebDriver;
         this.isLambdaTest = isLambdaTest;
         if(isLambdaTest){
@@ -45,7 +45,7 @@ public class TestBase {
         if(isLambdaTest){
             LambdaTestUtility.quitSession();
         }else {
-            homePage.quit();
+//            homePage.quit();
         }
     }
 }
